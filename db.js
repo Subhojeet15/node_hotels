@@ -5,7 +5,7 @@ require('dotenv').config();
 
 //define the Mongodb connection url
 
-// const mongoURL=process.env.MONGODB_URL_LOCAL,, // mongodb://localhost:27017/hotels  (instead of hotels , mention the name of the database u are joing to use (url currently present in dot env file)//uses local computer's database or mongodb which is downloaded into my own personal computer
+// const mongoURL=process.env.MONGODB_URL_LOCAL,, // mongodb:/localhost:0000/hotelss  (instead of hotels , mention the name of the database u are joing to use (url currently present in dot env file)//uses local computer's database or mongodb which is downloaded into my own personal computer
 //connect to the MongoDB server using the URL defined above 
 const mongoURL = process.env.MONGODB_URL //url to connect server and database with online one, using mongodb atlas
 mongoose.connect(mongoURL,{
