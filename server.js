@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const db=require('./db')//connecting db from db.js file
 
+require('dotenv').config();
 const bodyParser=require('body-parser')
 app.use(bodyParser.json())  //store in req.body ,, .json used because data in json format
 const PORT = process.env.PORT || 3000; //if port number is present in process.env.PORT it will use it , otherwise it will use 3000 as port number mentionned 
