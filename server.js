@@ -4,7 +4,7 @@ const db=require('./db')//connecting db from db.js file
 
 const bodyParser=require('body-parser')
 app.use(bodyParser.json())  //store in req.body ,, .json used because data in json format
-
+const PORT = process.env.PORT || 3000; //if port number is present in process.env.PORT it will use it , otherwise it will use 3000 as port number mentionned 
 
 
 app.get('/', function (req, res) {
@@ -25,7 +25,8 @@ app.use('/person',personRoutes)  //=>from when person is t, it will go to person
 const menuItemRoutes = require('./routes/menuItemRoutes')
 app.use('/menu',menuItemRoutes)   //accessing the routes from menuItems using /MenuItem
 
-app.listen(3000,()=>{
+
+app.listen(PORT,()=>{
     console.log("Listening in port 3000")  //this 3000 is the  port number which we are listening on "http://localhost:3000"
 })
 
